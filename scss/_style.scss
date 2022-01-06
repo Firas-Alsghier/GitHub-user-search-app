@@ -1,0 +1,198 @@
+.container {
+   width: 50%;
+   height: 100%;
+}
+
+.head {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-pack: justify;
+   -ms-flex-pack: justify;
+   justify-content: space-between;
+   margin: 1.3rem 0;
+}
+
+.title {
+   text-transform: capitalize;
+   font-size: 2.5rem;
+}
+
+.day {
+   font-size: 1.6rem;
+   -ms-flex-item-align: end;
+   align-self: flex-end;
+   cursor: pointer;
+   -moz-user-select: -moz-none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
+
+.search {
+   position: relative;
+   top: -0.8rem;
+   -webkit-box-shadow: 0.9px 0.9px 1.8px -5px rgba(0, 0, 0, 0.068),
+      2.5px 2.5px 5px -5px rgba(0, 0, 0, 0.079),
+      6px 6px 12.1px -5px rgba(0, 0, 0, 0.081),
+      20px 20px 40px -5px rgba(0, 0, 0, 0.08);
+   box-shadow: 0.9px 0.9px 1.8px -5px rgba(0, 0, 0, 0.068),
+      2.5px 2.5px 5px -5px rgba(0, 0, 0, 0.079),
+      6px 6px 12.1px -5px rgba(0, 0, 0, 0.081),
+      20px 20px 40px -5px rgba(0, 0, 0, 0.08);
+
+   i {
+      position: absolute;
+      left: 1rem;
+      top: 1.6rem;
+      font-size: 2.5rem;
+      color: $icon-link-color;
+   }
+
+   button {
+      position: absolute;
+      right: 0;
+      top: 1rem;
+      right: 1rem;
+      background: $btn-bg;
+      border: none;
+      color: $light-bg;
+      padding: 0.8rem 1.2rem;
+      font-size: 1.4rem;
+      border-radius: 0.6rem;
+   }
+}
+
+.search-input {
+   border: none;
+   outline: none;
+   width: 100%;
+   padding: 1.5rem 5rem;
+   border-radius: 0.9rem;
+   font-size: 1.7rem;
+}
+
+.box {
+   width: 100%;
+   height: auto;
+   min-height: auto;
+   padding: 2.5rem;
+   border-radius: 1rem;
+   background: $light-container-bg;
+   margin-top: 0.8rem;
+   -webkit-box-shadow: 6.5px 4.6px 4.3px rgba(0, 0, 0, 0.018),
+      13.1px 9.3px 10.2px rgba(0, 0, 0, 0.025),
+      20.7px 14.7px 19.3px rgba(0, 0, 0, 0.03),
+      31px 22px 34.4px rgba(0, 0, 0, 0.036),
+      48.4px 34.5px 64.3px rgba(0, 0, 0, 0.045),
+      97px 69px 154px rgba(0, 0, 0, 0.07);
+   box-shadow: 6.5px 4.6px 4.3px rgba(0, 0, 0, 0.018),
+      13.1px 9.3px 10.2px rgba(0, 0, 0, 0.025),
+      20.7px 14.7px 19.3px rgba(0, 0, 0, 0.03),
+      31px 22px 34.4px rgba(0, 0, 0, 0.036),
+      48.4px 34.5px 64.3px rgba(0, 0, 0, 0.045),
+      97px 69px 154px rgba(0, 0, 0, 0.07);
+
+   .hide {
+      display: none;
+   }
+}
+
+.img {
+   width: 20%;
+   border-radius: 50%;
+}
+
+.info {
+   width: 100%;
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -ms-flex-pack: distribute;
+   justify-content: space-around;
+   ul {
+      li {
+         text-align: left;
+         font-size: 1.5rem;
+         font-weight: map-get($font-weights, 'Regular');
+         &:nth-of-type(2) {
+            margin-bottom: 1.3rem;
+            color: $icon-link-color;
+            font-weight: map-get($font-weights, 'Medium');
+         }
+      }
+      & li:first-of-type {
+         font-size: 3rem;
+         font-weight: map-get($font-weights, 'Medium');
+         text-transform: capitalize;
+      }
+
+      & li:last-of-type {
+         color: $num-light-color;
+      }
+   }
+   p {
+      margin-top: 1.3rem;
+      font-size: 1.4rem;
+      color: $num-light-color;
+   }
+}
+
+.about {
+   margin: 1rem 0;
+   padding-left: 2rem;
+   p {
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: map-get($font-weights, 'Medium');
+      line-height: 2;
+   }
+}
+
+.followers {
+   background: $light-bg;
+   border-radius: 1rem;
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -ms-flex-pack: distribute;
+   justify-content: space-around;
+   padding: 1rem 0;
+   margin-top: 2rem;
+   .label {
+      color: $num-light-color;
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+   }
+
+   .num {
+      font-size: 2.5rem;
+      text-align: center;
+      font-weight: map-get($font-weights, 'Medium');
+   }
+}
+
+.social {
+   text-align: left;
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-pack: center;
+   -ms-flex-pack: center;
+   justify-content: center;
+   padding-top: 1rem;
+   ul {
+      li {
+         line-height: 3;
+         font-size: 1.4rem;
+         margin: 0 4rem;
+         i {
+            color: $body-dark-bg;
+            font-size: 2rem;
+            -webkit-transform: translateY(0.5rem);
+            -ms-transform: translateY(0.5rem);
+            transform: translateY(0.5rem);
+         }
+      }
+   }
+}

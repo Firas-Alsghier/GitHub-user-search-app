@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap');
+
+html {
+   font-size: 62.5%;
+}
+
+body {
+   font-family: 'Roboto Mono', monospace;
+   font-weight: map-get($font-weights, 'Regular');
+   background: $light-bg;
+   line-height: 1.7;
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-pack: center;
+   -ms-flex-pack: center;
+   justify-content: center;
+   -webkit-box-align: center;
+   -ms-flex-align: center;
+   align-items: center;
+   height: 100vh;
+}
+
+ul {
+   list-style: none;
+   margin: none;
+   padding: 0;
+}
+
+a,
+a:hover {
+   text-decoration: none;
+}
+
+.bg-dark-mode {
+   background: $body-dark-bg;
+   @if $body-dark-bg {
+      color: $text-dark-color;
+      .search-input,
+      .box {
+         background: $container-dark-bg;
+      }
+
+      .loader {
+         color: $light-bg;
+      }
+
+      .search-input::-webkit-input-placeholder {
+         color: $text-dark-color;
+      }
+
+      .search-input::-moz-placeholder {
+         color: $text-dark-color;
+      }
+
+      .search-input:-ms-input-placeholder {
+         color: $text-dark-color;
+      }
+
+      .search-input::-ms-input-placeholder {
+         color: $text-dark-color;
+      }
+
+      .search-input,
+      .search-input::placeholder {
+         color: $text-dark-color;
+      }
+
+      .date-join {
+         color: $second-dark-mode-color;
+      }
+
+      .text-bio {
+         color: $second-dark-mode-color;
+      }
+
+      .followers {
+         background: $body-dark-bg;
+         .label {
+            color: $second-dark-mode-color;
+         }
+      }
+      .social * {
+         color: $text-dark-color;
+         .link {
+            color: $second-dark-mode-color;
+         }
+      }
+   }
+}
