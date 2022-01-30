@@ -1,91 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="css/reboot.min.css" />
+      <script src="https://unpkg.com/phosphor-icons"></script>
+      <link rel="stylesheet" href="css/main.css" />
+      <title>GitHub Search</title>
+   </head>
 
-<head>
-   <meta charset="UTF-8" />
-   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <link rel="stylesheet" href="css/reboot.min.css" />
-   <script src="https://unpkg.com/phosphor-icons"></script>
-   <link rel="stylesheet" href="css/main.css" />
-   <title>GitHub Search</title>
-</head>
+   <body>
+      <div class="container">
+         <div class="head">
+            <h1 class="title">Dev finder</h1>
+            <p id="switch" class="day">Dark <i class="ph-moon"></i></p>
+         </div>
 
-<body>
-   <div class="container">
-      <div class="head">
-         <h1 class="title">Dev finder</h1>
-         <p id="switch" class="day">Dark <i class="ph-moon"></i></p>
-      </div>
+         <div class="search">
+            <i class="ph-magnifying-glass"></i>
+            <input
+               type="search"
+               class="search-input"
+               id="search"
+               placeholder="Search GitHub Username..."
+            />
+            <button id="btn">Search</button>
+         </div>
 
-      <div class="search">
-         <i class="ph-magnifying-glass"></i>
-         <input type="search" class="search-input" id="search" placeholder="Search GitHub Username..." />
-         <button id="btn">Search</button>
-      </div>
+         <div class="box">
+            <h1 id="wrong" class="hide" style="text-align: center">
+               Sorry, Something went wrong.
+            </h1>
+            <div id="hidden">
+               <div class="info">
+                  <div class="wrapper">
+                     <div class="avatar-wrapper">
+                        <img
+                           src="image/Octocat_logo.png"
+                           id="profile"
+                           class="img"
+                           alt="Profile Img"
+                        />
+                     </div>
+                     <ul class="dd">
+                        <li id="name">The octocat</li>
+                        <li id="nick-name">aoctocat</li>
+                        <li id="null" class="text-bio">This profile has no bio</li>
+                        <li class="date-join">Joined <span id="date">Jan 25 2011</span></li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="about">
+                  <p id="bio"></p>
+               </div>
 
-      <div class="box">
-         <h1 id="wrong" class="hide" style="text-align: center">
-            Sorry, Something went wrong.
-         </h1>
-         <div id="hidden">
-            <div class="info">
-               <img src="image/Octocat_logo.png" id="profile" class="img" alt="Profile Img" />
-               <ul>
-                  <li id="name">The octocat</li>
-                  <li id="nick-name">aoctocat</li>
-                  <li id="null" class="text-bio">This profile has no bio</li>
-               </ul>
-               <p class="date-join">
-                  Joined <span id="date">Jan 25 2011</span>
-               </p>
-            </div>
+               <div class="followers">
+                  <ul>
+                     <li class="label">Repos</li>
+                     <li class="num" id="repos">0</li>
+                  </ul>
+                  <ul>
+                     <li class="label">Followers</li>
+                     <li class="num" id="followers">0</li>
+                  </ul>
+                  <ul>
+                     <li class="label">Following</li>
+                     <li class="num" id="following">0</li>
+                  </ul>
+               </div>
 
-            <div class="about">
-               <p id="bio"></p>
-            </div>
-
-            <div class="followers">
-               <ul>
-                  <li class="label">Repos</li>
-                  <li class="num" id="repos">8</li>
-               </ul>
-               <ul>
-                  <li class="label">Followers</li>
-                  <li class="num" id="followers">355</li>
-               </ul>
-               <ul>
-                  <li class="label">Following</li>
-                  <li class="num" id="following">75</li>
-               </ul>
-            </div>
-
-            <div class="social">
-               <ul>
-                  <li>
-                     <i class="ph-map-pin"></i>
-                     <span id="location">Tripoli Libya</span>
-                  </li>
-                  <li>
-                     <a href=""><i class="ph-twitter-logo"></i>
-                        <span class="link" id="twitter">Not available</span></a>
-                  </li>
-               </ul>
-               <ul>
-                  <li>
-                     <a href=""><i class="ph-link"></i>
-                        <span id="website" class="link">www.google.com</span></a>
-                  </li>
-                  <li>
-                     <i class="ph-buildings"></i>
-                     <span id="company">Company</span>
-                  </li>
-               </ul>
+               <div class="social">
+                  <div class="soc-wrapper">
+                  <ul>
+                     <li>
+                        <i class="ph-map-pin"></i>
+                        <span id="location">Tripoli Libya</span>
+                     </li>
+                     <li>
+                        <a href=""
+                           ><i class="ph-twitter-logo"></i>
+                           <span class="link" id="twitter"
+                              >Not available</span
+                           ></a
+                        >
+                     </li>
+                  </ul>
+                  <ul>
+                     <li>
+                        <a href=""
+                           ><i class="ph-link"></i>
+                           <span id="website" class="link"
+                              >www.google.com</span
+                           ></a
+                        >
+                     </li>
+                     <li>
+                        <i class="ph-buildings"></i>
+                        <span id="company">Company</span>
+                     </li>
+                  </ul>
+               </div>
+               </div>
             </div>
          </div>
       </div>
-   </div>
-   <script src="js/App.js"></script>
-</body>
-
+      <script src="js/App.js"></script>
+   </body>
 </html>

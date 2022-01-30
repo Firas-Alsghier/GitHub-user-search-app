@@ -89,6 +89,11 @@
 html {
   font-size: 62.5%;
 }
+@media (max-width: 1024px) {
+  html {
+    font-size: 55%;
+  }
+}
 
 body {
   font-family: "Roboto Mono", monospace;
@@ -245,18 +250,57 @@ a:hover {
   display: none;
 }
 
-.img {
-  width: 20%;
-  border-radius: 50%;
-}
-
 .info {
-  width: 100%;
+  position: relative;
+}
+.info .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+@media (max-width: 1024px) {
+  .info .wrapper {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+}
+@media (max-width: 1024px) {
+  .info {
+    width: initial;
+  }
+}
+.info .avatar-wrapper {
+  width: 23%;
+  margin-right: 5rem;
+}
+@media (max-width: 1024px) {
+  .info .avatar-wrapper {
+    width: 25%;
+    margin-right: 2rem;
+  }
+}
+.info .img {
+  min-width: 80%;
+  max-width: 80%;
+  border-radius: 50%;
+}
+.info ul {
+  padding-right: 15rem;
+}
+@media (max-width: 1024px) {
+  .info ul {
+    padding-right: 10rem;
+  }
+}
+@media (max-width: 1024px) {
+  .info ul {
+    line-height: 1.4;
+    margin-top: 0.7rem;
+  }
 }
 .info ul li {
   text-align: left;
@@ -268,13 +312,34 @@ a:hover {
   color: #0f4b95;
   font-weight: 500;
 }
+@media (max-width: 1024px) {
+  .info ul li:nth-of-type(2) {
+    margin: 0;
+    line-height: 2.3;
+  }
+}
 .info ul li:first-of-type {
-  font-size: 3rem;
+  font-size: 2.7rem;
   font-weight: 500;
   text-transform: capitalize;
 }
+@media (max-width: 1024px) {
+  .info ul li:first-of-type {
+    font-size: 2.3rem;
+  }
+}
 .info ul li:last-of-type {
+  font-size: 1.4rem;
   color: #686c77;
+  position: absolute;
+  right: 0;
+  top: 13px;
+}
+@media (max-width: 1024px) {
+  .info ul li:last-of-type {
+    font-size: 1.3rem;
+    position: static;
+  }
 }
 .info p {
   margin-top: 1.3rem;
@@ -309,14 +374,31 @@ a:hover {
   font-size: 1.6rem;
   margin-bottom: 1rem;
 }
+@media (max-width: 1024px) {
+  .followers .label {
+    font-size: 1.4rem;
+  }
+}
 .followers .num {
   font-size: 2.5rem;
   text-align: center;
   font-weight: 500;
 }
+@media (max-width: 1024px) {
+  .followers .num {
+    font-size: 2.2rem;
+  }
+}
 
 .social {
-  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.social .soc-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -325,9 +407,14 @@ a:hover {
   justify-content: center;
   padding-top: 1rem;
 }
+@media (max-width: 1024px) {
+  .social .soc-wrapper {
+    display: block;
+  }
+}
 .social ul li {
   line-height: 3;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   margin: 0 4rem;
 }
 .social ul li i {

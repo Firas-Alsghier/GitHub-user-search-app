@@ -98,19 +98,47 @@
    }
 }
 
-.img {
-   width: 20%;
-   border-radius: 50%;
-}
-
 .info {
-   width: 100%;
-   display: -webkit-box;
-   display: -ms-flexbox;
-   display: flex;
-   -ms-flex-pack: distribute;
-   justify-content: space-around;
+   position: relative;
+   .wrapper {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: distribute;
+      -webkit-box-pack: center;
+      justify-content: center;
+      @include res {
+         -webkit-box-pack: end;
+         -ms-flex-pack: end;
+         justify-content: flex-end;
+      }
+   }
+   @include res {
+      width: initial;
+   }
+
+   .avatar-wrapper {
+      width: 23%;
+      margin-right: 5rem;
+      @include res {
+         width: 25%;
+         margin-right: 2rem;
+      }
+   }
+   .img {
+      min-width: 80%;
+      max-width: 80%;
+      border-radius: 50%;
+   }
    ul {
+      padding-right: 15rem;
+      @include res {
+         padding-right: 10rem;
+      }
+      @include res {
+         line-height: 1.4;
+         margin-top: 0.7rem;
+      }
       li {
          text-align: left;
          font-size: 1.5rem;
@@ -119,16 +147,31 @@
             margin-bottom: 1.3rem;
             color: $icon-link-color;
             font-weight: map-get($font-weights, 'Medium');
+            @include res {
+               margin: 0;
+               line-height: 2.3;
+            }
          }
       }
       & li:first-of-type {
-         font-size: 3rem;
+         font-size: 2.7rem;
          font-weight: map-get($font-weights, 'Medium');
          text-transform: capitalize;
+         @include res {
+            font-size: 2.3rem;
+         }
       }
 
       & li:last-of-type {
+         font-size: 1.4rem;
          color: $num-light-color;
+         position: absolute;
+         right: 0;
+         top: 13px;
+         @include res {
+            font-size: 1.3rem;
+            position: static;
+         }
       }
    }
    p {
@@ -163,28 +206,45 @@
       color: $num-light-color;
       font-size: 1.6rem;
       margin-bottom: 1rem;
+      @include res {
+         font-size: 1.4rem;
+      }
    }
 
    .num {
       font-size: 2.5rem;
       text-align: center;
       font-weight: map-get($font-weights, 'Medium');
+      @include res {
+         font-size: 2.2rem;
+      }
    }
 }
 
 .social {
-   text-align: left;
    display: -webkit-box;
    display: -ms-flexbox;
    display: flex;
    -webkit-box-pack: center;
    -ms-flex-pack: center;
    justify-content: center;
-   padding-top: 1rem;
+   .soc-wrapper {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      padding-top: 1rem;
+      @include res {
+         display: block;
+      }
+   }
+
    ul {
       li {
          line-height: 3;
-         font-size: 1.4rem;
+         font-size: 1.3rem;
          margin: 0 4rem;
          i {
             color: $body-dark-bg;
